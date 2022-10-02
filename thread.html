@@ -1,0 +1,167 @@
+<body>
+    <!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Stellar by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1 style="font-family:'Poppins', sans-serif; ;">Sirius</h1>
+						<p style="color: white;">Connect with people around the world and share you problems as well as help them!</p>
+					</header>
+
+				<!-- Nav -->
+					<!-- <nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#first">First Section</a></li>
+							<li><a href="#second">Second Section</a></li>
+							<li><a href="#cta">Get Started</a></li>
+						</ul>
+					</nav> -->
+
+				<!-- Main -->
+					<div id="main" style="background-image:url('images/rural_india.jpg')">
+
+						<!-- Introduction -->
+							<section id="intro" class="main" style="background-color: rgba(0, 0, 0, 0.684);color:white;">
+								<div class="spotlight">
+									<div class="content">
+                                        <div class="top-bar">
+                                            <h3 style="width:fit-content;padding: 10px;color: rgb(255, 255, 255);font-weight: bold;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;"> 
+                                                Drop your views,comments & queries here!
+                                            </h3>
+                                        </div>
+                                        <div class="main" >
+                                            <div class="header" >
+                                            </div>
+                                            <textarea style="background-color: transparent;color: white;"></textarea>
+                                            <button style="margin-top: 20px;margin-bottom: 10px;color: white;">add comment</button>
+                                            <div class="comments" style="margin-top: 10px;">
+                                            </div>
+                                        </div>
+                                        <script src="assets/js/data.js"></script>
+                                        <script>
+                                            var id = window.location.search.slice(1);
+                                            var thread = threads.find(t => t.id == id);
+                                            var header = document.querySelector('.header');
+                                            var headerHtml = `
+                                                <h4 class="title">
+                                                    ${thread.title}
+                                                </h4>
+                                                <div class="bottom">
+                                                    <p class="timestamp">
+                                                        ${new Date(thread.date).toLocaleString()}
+                                                    </p>
+                                                    <p class="comment-count">
+                                                        ${thread.comments.length} comments
+                                                    </p>
+                                                </div>
+                                            `
+                                            header.insertAdjacentHTML('beforeend', headerHtml)
+                                    
+                                            function addComment(comment) {
+                                                var commentHtml = `
+                                                    <div class="comment">
+                                                        <div class="top-comment">
+                                                            <p class="user">
+                                                                ${comment.author}
+                                                            </p>
+                                                            <p class="comment-ts">
+                                                                ${new Date(comment.date).toLocaleString()}
+                                                            </p>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            ${comment.content}
+                                                        </div>
+                                                    </div>
+                                                `
+                                                comments.insertAdjacentHTML('beforeend', commentHtml);
+                                            }
+                                    
+                                            var comments = document.querySelector('.comments');
+                                            for (let comment of thread.comments) {
+                                                addComment(comment);
+                                            }
+                                    
+                                            var btn = document.querySelector('button');
+                                            btn.addEventListener('click', function() {
+                                                var txt = document.querySelector('textarea');
+                                                var comment = {
+                                                    content: txt.value,
+                                                    date: Date.now(),
+                                                    author: 'Aaron'
+                                                }
+                                                addComment(comment);
+                                                txt.value = '';
+                                                thread.comments.push(comment);
+                                                localStorage.setItem('threads', JSON.stringify(threads));
+                                            })
+                                        </script>
+                                    
+									</div>
+									
+								</div>
+							</section>
+
+					
+
+					</div> 
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<h2>About US</h2>
+						<p>We aim to help people around the country by connecting them to our partnered NGOs, our supportive team and other people around the country who face the same issues or can help them in any way!</p>
+						<ul class="actions">
+							<li><a href="generic.html" class="button">Home</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Reach Us</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>VIT,Chennai</dd>
+							<dt>Phone</dt>
+							<dd>+91 8969993229</dd>
+							<dt>Email</dt>
+							<dd><a href="#">sirius.info@gmail.com</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+							
+						</ul>
+					</section>
+					<p class="copyright">&copy; Team Sirius</p>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+</body>
